@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieVerse</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🎬 MovieVerse</h1>
+      <p class="slogan">Your Movie Universe</p>
+    </header>
+
+    <!-- filter section -->
+    <div class="filter-container">
+      <section class="filter-section">
+        <label for="genre-filter">Filter by Genre:</label>
+        <select name="genre-filter" id="genre-filter">
+          <option value="all" selected>All Genres</option>
+          <option value="action">Action</option>
+          <option value="comedy">Comedy</option>
+          <option value="drama">Drama</option>
+          <option value="horror">Horror</option>
+          <option value="sci-fi">Sci-Fi</option>
+        </select>
+      </section>
+    </div>
+
+    <main>
+      <section class="movie-grid">
+        <!-- example movie card -->
+        <div class="movie-card">
+          <div class="movie-card-img">
+            <img src="" alt="" />
+          </div>
+
+          <div class="movie-card-content">
+            <h3 class="movie-title"></h3>
+            <div class="movie-metadata">
+              <span class="movie-year">Year</span>
+              <span class="movie-genre">Genre</span>
+            </div>
+            <p class="movie-description">Movie description goes here</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 MovieVerse. All rights reserved.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

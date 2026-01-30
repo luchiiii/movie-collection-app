@@ -1,0 +1,84 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "The Wedding Party",
+      "year": 2016,
+      "genre": "comedy",
+      "description": "A couple's dream wedding becomes a hilarious nightmare when everything that can go wrong does go wrong.",
+      "poster": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=250&h=350&fit=crop"
+    },
+    {
+      "id": 2,
+      "title": "Living in Bondage",
+      "year": 2019,
+      "genre": "horror",
+      "description": "A man's ambition leads him into the dark world of ritual and supernatural consequences.",
+      "poster": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=250&h=350&fit=crop"
+    },
+    {
+      "id": 3,
+      "title": "Lionheart",
+      "year": 2018,
+      "genre": "drama",
+      "description": "A young woman takes over her father's transport business and fights to keep it afloat against all odds.",
+      "poster": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=250&h=350&fit=crop"
+    },
+    {
+      "id": 4,
+      "title": "Chief Daddy",
+      "year": 2018,
+      "genre": "comedy",
+      "description": "The eccentric patriarch of a wealthy family dies and leaves behind chaos, humor, and family secrets.",
+      "poster": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=250&h=350&fit=crop"
+    },
+    {
+      "id": 5,
+      "title": "Lagos Nights",
+      "year": 2024,
+      "genre": "action",
+      "description": "A retired agent is forced back into the game when his past catches up with him on the streets of Lagos.",
+      "poster": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=250&h=350&fit=crop"
+    },
+    {
+      "id": 6,
+      "title": "Rattlesnake",
+      "year": 2023,
+      "genre": "drama",
+      "description": "A man must navigate the harsh realities of prison and survival while protecting his family.",
+      "poster": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=250&h=350&fit=crop"
+    },
+    {
+      "id": 7,
+      "title": "The Bling Lagosians",
+      "year": 2020,
+      "genre": "comedy",
+      "description": "Wealthy Lagos socialites get caught up in drama, betrayal, and hilarious situations.",
+      "poster": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=250&h=350&fit=crop"
+    },
+    {
+      "id": 8,
+      "title": "Shanty Town",
+      "year": 2023,
+      "genre": "action",
+      "description": "A young man rises from the streets to become a force for justice in his community.",
+      "poster": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=250&h=350&fit=crop"
+    },
+    {
+      "id": 9,
+      "title": "Skincare",
+      "year": 2021,
+      "genre": "horror",
+      "description": "A woman's obsession with a mysterious skincare product leads her into a terrifying nightmare.",
+      "poster": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=250&h=350&fit=crop"
+    },
+    {
+      "id": 10,
+      "title": "New Money",
+      "year": 2022,
+      "genre": "sci-fi",
+      "description": "In a near-future Lagos, cryptocurrency and technology create unexpected opportunities and dangers.",
+      "poster": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=250&h=350&fit=crop"
+    }
+  ]
+}
