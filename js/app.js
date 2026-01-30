@@ -2,6 +2,8 @@ const DATA_PATH = "js/data/movies.json";
 const FALLBACK_POSTER = "https://via.placeholder.com/250x350?text=No+Poster";
 
 const movieGrid = document.querySelector(".movie-grid");
+const genreFilter = document.querySelector("#genre-filter");
+let allMovies = [];
 
 const buildMovieCard = (movie) => {
   const card = document.createElement("div");
@@ -53,7 +55,7 @@ const buildMovieCard = (movie) => {
   return card;
 };
 
-const renderMovies = (movies) => {
+const renderMovies = (movies, emptyMessage = "No movies available.") => {
   if (!movieGrid) {
     return;
   }
@@ -63,7 +65,7 @@ const renderMovies = (movies) => {
   if (!Array.isArray(movies) || movies.length === 0) {
     const emptyState = document.createElement("p");
     emptyState.className = "movie-description";
-    emptyState.textContent = "No movies available.";
+    emptyState.textContent = emptyMessage;
     movieGrid.appendChild(emptyState);
     return;
   }
@@ -76,6 +78,28 @@ const renderMovies = (movies) => {
   movieGrid.appendChild(fragment);
 };
 
+const filterMoviesByGenre = (genre, movies) => {
+  if (!genre || genre === "all") {
+    return movies;
+  }
+
+  const normalizedGenre = genre.toLowerCase();
+  return movies.filter(
+    (movie) => (movie.genre || "").toLowerCase() === normalizedGenre
+  );
+};
+
+const handleGenreChange = () => {
+  const selectedGenre = genreFilter ? genreFilter.value : "all";
+  const filteredMovies = filterMoviesByGenre(selectedGenre, allMovies);
+  const emptyMessage =
+    selectedGenre === "all"
+      ? "No movies available."
+      : "No movies match this genre.";
+
+  renderMovies(filteredMovies, emptyMessage);
+};
+
 const loadMovies = async () => {
   try {
     const response = await fetch(DATA_PATH);
@@ -84,7 +108,8 @@ const loadMovies = async () => {
     }
 
     const data = await response.json();
-    renderMovies(data.movies || []);
+    allMovies = Array.isArray(data.movies) ? data.movies : [];
+    handleGenreChange();
   } catch (error) {
     if (movieGrid) {
       movieGrid.innerHTML = "";
@@ -97,4 +122,9 @@ const loadMovies = async () => {
   }
 };
 
-document.addEventListener("DOMContentLoaded", loadMovies);
+document.addEventListener("DOMContentLoaded", () => {
+  loadMovies();
+  if (genreFilter) {
+    genreFilter.addEventListener("change", handleGenreChange);
+  }
+});
